@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import Button from './Button';
 import './Header.css'
@@ -9,6 +9,7 @@ import NavTab from './NavTab';
 function Header() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [showLogin, setShowLogin] = useState(false);
+    const headerRef = useRef(null);
     const toggleList = (e) => {
         const dropdown = e.target.nextSibling;
         dropdown.classList.toggle('hidden')
@@ -19,9 +20,16 @@ function Header() {
         setShowLogin(false);
     }, [location.pathname, location.hash]);
 
+    useEffect(() => {
+        if (showLogin) {
+            document.body.style.overflow = "hidden";
+        }
+        else
+            document.body.style.overflow = "auto";
+    }, [showLogin]);
 
     return (
-        <header>
+        <header ref={headerRef}>
             <Link to="/">
                 <div className="title">
                     <div className="title-logo">

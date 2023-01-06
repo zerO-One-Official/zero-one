@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { HashLink } from "react-router-hash-link";
 import './NavTab.css'
 
 function NavTab(props) {
@@ -30,12 +31,12 @@ function NavTab(props) {
 
         <li ref={navTabRef} className={`nav-tab ${activeTab === link ? 'active' : ''}`} onMouseOver={setColors}>
             <span className='gradient-box'></span>
-            <Link to={link} data-text={name}>
+            <HashLink to={link} data-text={name}>
                 <div className="icon">
                     <i className={icon}></i>
                 </div>
                 {name}
-            </Link>
+            </HashLink>
         </li>
     );
 }

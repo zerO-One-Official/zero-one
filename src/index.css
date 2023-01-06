@@ -33,12 +33,14 @@
 
 html {
     font-size: 62.5%;
+    scroll-behavior: smooth;
 }
 
 body {
     color: var(--text);
     background: var(--bg);
     font-family: "Poppins", sans-serif;
+    overflow: scroll;
 }
 
 body.dark {
