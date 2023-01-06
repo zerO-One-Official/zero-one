@@ -28,6 +28,17 @@ function Header() {
             document.body.style.overflow = "auto";
     }, [showLogin]);
 
+    const changeTheme = () => {
+        if (document.body.classList.contains('dark')) {
+            document.body.classList.remove('dark')
+            document.body.classList.add('light')
+        }
+        else {
+            document.body.classList.add('dark')
+            document.body.classList.remove('light')
+        }
+    }
+
     return (
         <header ref={headerRef}>
             <Link to="/">
@@ -79,6 +90,12 @@ function Header() {
             {
                 showLogin ? <LoginSignUp setShowLogin={setShowLogin} /> : ''
             }
+
+
+            <div className="theme-switch" onClick={changeTheme} >
+                <i className="fa-solid fa-cloud-moon"></i>
+                <i className="fa-solid fa-cloud-sun"></i>
+            </div>
         </header>
     );
 }
