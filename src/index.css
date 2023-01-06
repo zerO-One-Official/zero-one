@@ -7,16 +7,16 @@
     --text: #ffffff;
     --black: #000000;
     --white: #ffffff;
-    --red1: #fc4d12;
-    --red2: #fc1235;
+    --red1: #fb2323;
+    --red2: #ff3700;
 }
 
 ::-webkit-scrollbar {
-    width: 1rem;
+    width: .6rem;
 }
 
 ::-webkit-scrollbar-track {
-    width: 1rem;
+    width: .6rem;
     border-radius: 1rem;
 }
 
@@ -52,7 +52,7 @@ body.light {
 }
 
 a {
-    color: var(--black);
+    color: var(--text);
     text-decoration: none;
 }
 

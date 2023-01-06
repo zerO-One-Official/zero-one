@@ -37,7 +37,7 @@ function Header() {
                     <NavTab name="Home" link="/" icon="fa-solid fa-house" />
                     <NavTab name="About" link="/#about" icon="fa-solid fa-circle-info" />
                     {isLoggedIn ? <NavTab name="Lab" link="/lab" icon="fa-solid fa-flask" /> : ''}
-                    <NavTab name="Contest" link="/contest" icon="fa-solid fa-user-ninja" />
+                    <NavTab name="Contest" link="/contest" icon="fa-solid fa-trophy" />
                     <NavTab name="Resource" link="/resource" icon="fa-solid fa-book" />
                     {isLoggedIn ? '' : <NavTab name="Contact Us" link="/#contact-us" icon="fa-solid fa-headset" />}
 
