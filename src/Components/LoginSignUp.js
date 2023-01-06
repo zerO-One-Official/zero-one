@@ -36,10 +36,11 @@ function LoginSignUp(props) {
                 </div>
                 <div className={`signup-fields fields ${activeSwitch === "signup" ? 'active' : ''}`}>
                     <div className="name-field">
-                        <Input type="text" label="First Name" icon="fa-solid fa-f" name="first-name" />
-                        <Input type="text" label="Last Name" icon="fa-solid fa-l" name="last-name" />
+                        <Input type="text" label="First Name" icon="fa-solid fa-user" name="first-name" />
+                        <Input type="text" label="Last Name" icon="fa-solid fa-user" name="last-name" />
                     </div>
-                    <Input type="email" label="email" icon="fa-solid fa-at" name="email" />
+                    <Input type="email" label="email" icon="fa-solid fa-envelope" name="email" />
+                    <Input type="number" label="enter phone" icon="fa-solid fa-phone" name="phone" />
                     <Input type="password" label="enter password" icon="fa-solid fa-key" name="set-password" />
                     <Input type="password" label="re-enter password" icon="fa-solid fa-key" name="confirm-password" />
                     <div className="button">

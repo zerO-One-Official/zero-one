@@ -1,23 +1,23 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 :root {
-  --primary: #163955;
-  --secondary: #8fcbeb;
-  --bg: #000000;
-  --text: #ffffff;
-  --black: #000000;
-  --white: #ffffff;
-  --red1: #fc4d12;
-  --red2: #fc1235;
+    --primary: #163955;
+    --secondary: #8fcbeb;
+    --bg: #000000;
+    --text: #ffffff;
+    --black: #000000;
+    --white: #ffffff;
+    --red1: #fb2323;
+    --red2: #ff3700;
 }
 
 ::-webkit-scrollbar {
-  width: 0.6rem;
+    width: .6rem;
 }
 
 ::-webkit-scrollbar-track {
-  width: 0.6rem;
-  border-radius: 1rem;
+    width: .6rem;
+    border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -51,9 +51,9 @@ body.light {
   --bg: #ffffff;
 }
 
-a {
-  color: var(--text);
-  text-decoration: none;
+
+    color: var(--text);
+    text-decoration: none;
 }
 
 ul,

@@ -9,6 +9,7 @@
 
 .input-box .icon {
     position: absolute;
+    left: 1rem;
     width: 5rem;
     height: 5rem;
     display: grid;
@@ -21,9 +22,25 @@
     opacity: .8;
 }
 
-.input-box:last-child {
-    margin-bottom: 0;
+.input-box .icon.password-show-hide {
+    background: var(--text);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    left: calc(100% - 6rem);
+    font-size: 2rem;
+    cursor: pointer;
+    opacity: 1;
 }
+
+.icon.password-show-hide i {
+    pointer-events: none;
+    display: block;
+}
+
+.icon.password-show-hide i.hidden {
+    display: none;
+}
+
 
 .input-box input {
     height: 5rem;
@@ -37,6 +54,27 @@
     border: none;
     letter-spacing: .1rem;
 }
+
+.input-box input[type="number"]::-webkit-outer-spin-button,
+.input-box input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.input-box input[type="number"] {
+    appearance: textfield;
+    -moz-appearance: textfield;
+}
+
+.input-box input[type=password]::-ms-reveal,
+.input-box input[type=password]::-ms-clear {
+    display: none;
+}
+
+.input-box input[type=password] {
+    padding-right: 5rem;
+}
+
 
 .input-box input+label {
     position: absolute;
