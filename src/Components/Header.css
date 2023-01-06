@@ -169,3 +169,47 @@ header .user-info {
 .nav-profile-dropdown-list .dropdown-list-items:last-child:after {
     display: none;
 }
+
+
+.theme-switch {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    padding: 2rem;
+    display: grid;
+    cursor: pointer;
+    background: var(--text);
+    border-radius: 50%;
+}
+
+
+.theme-switch:active {
+    transform: scale(.92);
+}
+
+.theme-switch i {
+    color: var(--bg);
+    font-size: 2rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: .5s;
+}
+
+body.dark .theme-switch i.fa-cloud-moon {
+    opacity: 0;
+}
+
+body.dark .theme-switch i.fa-cloud-sun {
+    opacity: 1;
+    font-size: 2.3rem;
+}
+
+body.light .theme-switch i.fa-cloud-moon {
+    opacity: 1;
+}
+
+body.light .theme-switch i.fa-cloud-sun {
+    opacity: 0;
+}

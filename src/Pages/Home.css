@@ -79,8 +79,6 @@
 
 }
 
-@media(prefs-reduced-motion:no-preference) {}
-
 .about-section .section-content {
     font-size: 3rem;
     flex: 1;

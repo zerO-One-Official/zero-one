@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import Logo from '../Components/Logo';
 import "./Home.css"
@@ -7,18 +7,18 @@ import './StarBg.css'
 
 function Home() {
     const loc = useLocation();
-    const navigate = useNavigate();
+    const [themeValue, setThemeValue] = useState(1);
+    const [scrollY, setScrollY] = useState(window.scrollY);
+    const navigation = useNavigate();
     useEffect(() => {
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    console.log('enter');
                     entry.target.classList.add('scroll-show')
                     entry.target.classList.remove('scroll-hide')
                 }
                 else {
-                    console.log('exit');
                     entry.target.classList.add('scroll-hide')
                     entry.target.classList.remove('scroll-show')
                 }
@@ -36,6 +36,12 @@ function Home() {
             window.scroll(0, 0);
         }
     }, [loc.pathname, loc.hash]);
+
+    // useEffect(() => {
+    //     const y = scrollY;
+    //     if (y < 10) navigation('/');
+    //     if (y > 700) navigation('/#about')
+    // }, [scrollY]);
 
 
     return (

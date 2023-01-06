@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap");
 
 :root {
     --primary: #163955;
@@ -9,6 +9,11 @@
     --white: #ffffff;
     --red1: #fb2323;
     --red2: #ff3700;
+}
+
+::selection {
+    background: var(--text);
+    color: var(--bg);
 }
 
 ::-webkit-scrollbar {
