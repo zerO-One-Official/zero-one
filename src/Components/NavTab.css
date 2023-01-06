@@ -1,6 +1,6 @@
 .nav-tab a {
     padding: 1rem 2rem;
-    background: var(--bg);
+    background: transparent;
     position: relative;
     font-size: 1.5rem;
     border-radius: 1rem;

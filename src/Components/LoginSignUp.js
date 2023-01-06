@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Input from './Input';
 import './LoginSignUp.css'
 import Button from './Button'
@@ -8,6 +8,7 @@ function LoginSignUp(props) {
     const { setShowLogin } = props;
 
     const [activeSwitch, setActiveSwitch] = useState('signup');
+
 
     return (
         <div className='login-signup'>
