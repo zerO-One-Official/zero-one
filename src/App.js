@@ -5,11 +5,13 @@ import Home from './Pages/Home';
 import Error from './Pages/Error';
 import Contest from './Pages/Contest';
 import Resource from './Pages/Resource';
+import StartBg from './Components/StartBg';
 
 function App() {
   return (
     <div className="App">
       <Header />
+      <StartBg />
       <Routes>
         <Route exact path='/' element={<Home />} />
         <Route exact path='/contest' element={<Contest />} />

@@ -31,12 +31,19 @@ function NavTab(props) {
 
         <li ref={navTabRef} className={`nav-tab ${activeTab === link ? 'active' : ''}`} onMouseOver={setColors}>
             <span className='gradient-box'></span>
-            <HashLink to={link} data-text={name}>
-                <div className="icon">
-                    <i className={icon}></i>
-                </div>
-                {name}
-            </HashLink>
+            {
+                link.includes('#') ? <HashLink to={link} data-text={name}>
+                    <div className="icon">
+                        <i className={icon}></i>
+                    </div>
+                    {name}
+                </HashLink> : <Link to={link} data-text={name}>
+                    <div className="icon">
+                        <i className={icon}></i>
+                    </div>
+                    {name}
+                </Link>
+            }
         </li>
     );
 }

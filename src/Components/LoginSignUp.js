@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Input from './Input';
 import './LoginSignUp.css'
 import Button from './Button'
@@ -6,14 +6,20 @@ import Button from './Button'
 function LoginSignUp(props) {
 
     const { setShowLogin } = props;
+    const dialogRef = useRef(null);
+    document.addEventListener('click', (e) => {
+        if (e.target === dialogRef.current) {
+            setShowLogin(false);
+        }
+    })
 
     const [activeSwitch, setActiveSwitch] = useState('signup');
 
 
     return (
-        <div className='login-signup'>
-            <div className="dialog-box">
-                <div className="login-signup-switcher">
+        <div className='login-signup' ref={dialogRef}>
+            <div className="dialog-box" >
+                <div className="login-signup-switcher" >
                     <div className={`switch ${activeSwitch === "signup" ? 'active' : ''}`} onClick={() => { setActiveSwitch('signup') }}>
                         <div className="icon">
                             <i className="fa-solid fa-user-plus"></i>
@@ -27,6 +33,7 @@ function LoginSignUp(props) {
                         Login
                     </div>
                 </div>
+                <div className="login-signup-info">All fields are mandatory</div>
                 <div className={`login-fields fields ${activeSwitch === "login" ? 'active' : ''}`}>
                     <Input type="text" label="username or email" icon="fa-solid fa-user" name="username" />
                     <Input type="password" label="password" icon="fa-solid fa-lock" name="password" />
