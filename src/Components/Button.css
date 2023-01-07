@@ -2,6 +2,8 @@
     padding: 1rem 3rem;
     border-radius: 5rem;
     position: relative;
+    display: grid;
+    place-items: center;
     font-size: 1.8rem;
     transition: cubic-bezier(0.45, -0.31, 0.89, 1.36);
     background: linear-gradient(to left, var(--c1), var(--c2));

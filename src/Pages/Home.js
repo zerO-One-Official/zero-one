@@ -2,8 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 import Logo from '../Components/Logo';
 import "./Home.css"
-import './Pages.css'
-import './StarBg.css'
 
 function Home() {
     const loc = useLocation();
@@ -46,11 +44,6 @@ function Home() {
 
     return (
         <div className='home-page page'>
-            <div className="stars-bg">
-                <div id="stars"></div>
-                <div id="stars2"></div>
-                <div id="stars3"></div>
-            </div>
 
             <div className="homepage-logo">
                 <div className="main-content">
@@ -59,7 +52,7 @@ function Home() {
                 <div className="sub-content">
                     <div className="club">Coding Club</div>
                     <div className="college-name">
-                        <a href="https://www.mcemotihari.ac.in/" target="_blank" rel="noreferrer">M.C.E.&nbsp; Motihari</a>
+                        <a href="https://www.mcemotihari.ac.in/" target="_blank" rel="noreferrer">Motihari College Of Engineering</a>
                     </div>
                 </div>
             </div>

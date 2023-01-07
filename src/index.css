@@ -20,15 +20,25 @@
     width: .6rem;
 }
 
-::-webkit-scrollbar-track {
-    width: .6rem;
+::-webkit-scrollbar-thumb {
+    width: 100%;
+    border-radius: 1rem;
+    background: linear-gradient(to bottom, transparent, var(--c1), var(--c2), transparent);
     border-radius: 1rem;
 }
 
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--c1), var(--c2));
+::-webkit-scrollbar-track {
+    width: 100%;
     border-radius: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: .3;
+    transition: .3s;
 }
+
+::-webkit-scrollbar-track:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
 
 * {
     margin: 0;
@@ -61,6 +71,8 @@ body.light {
 a {
     color: var(--text);
     text-decoration: none;
+    display: grid;
+    place-items: center;
 }
 
 ul,
